@@ -1,0 +1,401 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 80px;
+  margin-right: 20px;
+}
+
+.navbar-logo a {
+  color: #001064;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+.navbar-menu a {
+  color: #001064;
+  padding: 12px;
+  margin: 0 10px;
+  border-radius: 4px;
+  transition: 0.3s linear;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 20px;
+}
+
+.navbar-menu a:hover {
+  background-color: #424242;
+  color: white;
+}
+
+.navbar-me {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-me img {
+  margin-left: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.navbar-me .name {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.navbar-me .name::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.navbar-me .name:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 30px;
+  color: #001064;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar-toggleBtn {
+    display: block;
+    top: 35px;
+  }
+
+  .navbar-menu {
+    display: none !important;
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    background-color: #172b4d;
+    top: 90px;
+    right: 0;
+    display: block;
+    padding: 20px 40px;
+  }
+
+  .navbar-menu::before {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 35px;
+  }
+
+  .navbar-menu a:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .navbar-menu a {
+    color: white;
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navbar-me {
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: block !important;
+  }
+
+  #about .inner-width .about-content .about-pic {
+    margin: 0 auto 60px;
+    margin-left: 100px;
+  }
+
+  #about .inner-width .about-content .about-text {
+    flex: 100%;
+    text-align: center;
+  }
+
+  #about .inner-width .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Header End */
+
+/* Section 1 Home start */
+#home {
+  height: 100vh;
+  min-height: 500px;
+  background: url(image/2.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#home .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+#home .content h1 {
+  font-size: 40px;
+  margin-bottom: 60px;
+  font-weight: 70;
+}
+
+#home .content h1::after {
+  content: '는 프론트엔드 개발자입니다.';
+  animation: textanim 10s linear infinite;
+}
+
+@keyframes textanim {
+  100% {
+    content: '의 포트폴리오 사이트입니다.';
+  }
+}
+
+/* Section 1 Home End */
+
+/* Section2 About Me */
+#about {
+  padding: 100px 50px;
+}
+
+#about .inner-width .title {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: #111;
+}
+
+#about .inner-width .title::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #111;
+  bottom: 0;
+  left: calc(50% - 40px);
+}
+
+#about .inner-width .title::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  background-color: turquoise;
+  border: 4px solid white;
+  left: calc(50% - 12px);
+  bottom: -7px;
+}
+
+#about .inner-width .about-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#about .inner-width .about-content .about-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 100px;
+}
+
+#about .inner-width .about-content .about-text {
+  flex: 1;
+}
+
+#about .inner-width .about-content .about-text p {
+  font-size: 17px;
+  text-align: justify;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.skills {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills .skill {
+  width: calc(50% - 20px);
+  margin: 15px 0;
+}
+
+.skills .skill .skill-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills .skill .skill-bar {
+  height: 4px;
+  background-color: #ddd;
+  margin-top: 14px;
+  position: relative;
+}
+
+.skills .skill .skill-bar::after {
+  content: '';
+  position: absolute;
+  height: 6px;
+  background-color: turquoise;
+  bottom: 0;
+}
+
+.skills .skill .html::after {
+  width: 80%;
+}
+
+.skills .skill .css::after {
+  width: 65%;
+}
+
+.skills .skill .javascript::after {
+  width: 55%;
+}
+
+.skills .skill .react::after {
+  width: 50%;
+}
+
+/* Section3 Projects */
+
+#works {
+  padding: 100px 50px;
+}
+
+#works .inner-width .section-title {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: #111;
+}
+
+#works .inner-width .section-title::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #111;
+  bottom: 0;
+  left: calc(50% - 40px);
+}
+
+#works .inner-width .section-title::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  background-color: turquoise;
+  border: 4px solid white;
+  left: calc(50% - 12px);
+  bottom: -7px;
+}
+
+.works {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.work {
+  width: calc(33% - 10px);
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.work img {
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 300ms ease;
+}
+
+.work img:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  width: 100vw;
+  overflow: hidden;
+  padding: 70px 0;
+  background-color: #18181a;
+}
+
+.inner-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 1100px;
+  height: 100%;
+}
+
+.logo {
+  font-size: 3rem;
+  color: #e45e20;
+}
+
+.blog {
+  font-size: 4rem;
+  display: flex;
+}
+
+.blog li {
+  padding-right: 4rem;
+}
+
+.blog a {
+  color: white;
+}

@@ -366,9 +366,7 @@ ul {
   transform: scale(1.1);
 }
 
-.footer {
-  width: 100vw;
-  overflow: hidden;
+#footer {
   padding: 70px 0;
   background-color: #18181a;
 }
@@ -377,14 +375,12 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  width: 1100px;
-  height: 100%;
 }
 
 .logo {
   font-size: 3rem;
   color: #e45e20;
+  margin-left: 4rem;
 }
 
 .blog {
@@ -393,7 +389,7 @@ ul {
 }
 
 .blog li {
-  padding-right: 4rem;
+  margin-right: 4rem;
 }
 
 .blog a {

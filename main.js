@@ -4,6 +4,7 @@ const home = document.querySelector('.home-btn');
 const about = document.querySelector('.about-btn');
 const works = document.querySelector('.works-btn');
 const footer = document.querySelector('.footer-btn');
+const img = document.querySelector('.work img');
 
 toggleBtn.addEventListener('click', () => {
     menu.classList.toggle('active');

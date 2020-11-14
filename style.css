@@ -173,24 +173,34 @@ ul {
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 100%;
   color: white;
 }
 
 #home .content h1 {
-  font-size: 40px;
-  margin-bottom: 60px;
-  font-weight: 70;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-#home .content h1::after {
-  content: '는 프론트엔드 개발자입니다.';
-  animation: textanim 10s linear infinite;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
 }
 
-@keyframes textanim {
-  100% {
-    content: '의 포트폴리오 사이트입니다.';
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
   }
 }
 
